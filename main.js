@@ -2,8 +2,8 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const loaderElement = document.querySelector('loader');
-loaderElement.style.display = 'flex'; // Show loader
+// const loaderElement = document.querySelector('loader');
+// loaderElement.style.display = 'flex'; // Show loader
 
 // Setup
 
@@ -23,18 +23,18 @@ renderer.render(scene, camera);
 
 // Torus
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
-const torus = new THREE.Mesh(geometry, material);
-
-scene.add(torus);
-
-// // const geometry = new THREE.TorusGeometry(10,3,16,100)//
-// const geometry = new THREE.TorusKnotGeometry( 10, 1.9, 41, 15, 9,10); 
-// const material = new THREE.MeshStandardMaterial({color:0x892500});//wrapping paper for geometry
+// const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+// const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
 // const torus = new THREE.Mesh(geometry, material);
 
 // scene.add(torus);
+
+const geometry = new THREE.TorusGeometry(10,3,16,100)//
+// const geometry = new THREE.TorusKnotGeometry( 10, 1.9, 41, 15, 9,10); 
+const material = new THREE.MeshStandardMaterial({color:0x892500});//wrapping paper for geometry
+const torus = new THREE.Mesh(geometry, material);
+
+scene.add(torus);
 
 // Lights
 
@@ -140,9 +140,9 @@ function animate() {
   }
 }
 
-window.addEventListener('load', () => {
-  // Hide loader
-  loaderElement.style.display = 'none';
-});
+// window.addEventListener('load', () => {
+//   // Hide loader
+//   loaderElement.style.display = 'none';
+// });
 
 animate();
