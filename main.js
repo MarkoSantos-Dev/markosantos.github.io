@@ -74,7 +74,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const markoTexture = new THREE.TextureLoader().load('./marko3.png');
+const markoTexture = new THREE.TextureLoader().load('https://github.com/MarkoSantos-Dev/markosantos.github.io/blob/main/Marko3.png?raw=true');
 
 const marko = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: markoTexture }));
 
