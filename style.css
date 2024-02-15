@@ -1,0 +1,158 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+* {
+  box-sizing: border-box;
+}
+html { scroll-behavior: smooth; } 
+
+body::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+#links{
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+}
+
+#links span {
+  font-size: 1.5rem;
+  color: rgb(233, 214, 214);
+  margin: 0px 5px;
+}
+
+header h1{
+  text-align: center;
+}
+
+#links a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(195, 184, 184);
+  margin-bottom: 60px;
+}
+
+.btn:hover{
+  transform: scale(1.2);
+}
+
+#links a:hover{
+  color: rgb(250, 250, 250);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    color: black;
+    background-color: white;
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+  /* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 30px;
+  aspect-ratio: 1;
+  background: #554236;
+  display: grid;
+  transform-origin: top right;
+  animation: l5-0 4s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: #f77825;
+  transform-origin: inherit;
+  animation: inherit;
+  animation-name: l5-1;
+  animation-duration: 1s;
+}
+.loader::after {
+  background:#60B99A;
+  --s:60deg;
+}
+@keyframes l5-0 {
+  0%,5%   {transform: rotate(0)}
+  25%,30% {transform: rotate(90deg)}
+  50%,55% {transform: rotate(180deg)}
+  75%,80% {transform: rotate(270deg)}
+  100%    {transform: rotate(360deg)}
+}
+@keyframes l5-1 {
+  50% {transform: rotate(var(--s,30deg))}
+  100% {transform: rotate(0)}
+}
