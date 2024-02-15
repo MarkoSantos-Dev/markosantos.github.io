@@ -74,7 +74,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const markoTexture = new THREE.TextureLoader().load('../marko3.png');
+const markoTexture = new THREE.TextureLoader().load('./marko3.png');
 
 const marko = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: markoTexture }));
 
@@ -82,8 +82,8 @@ scene.add(marko);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('./moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('./normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -134,15 +134,7 @@ function animate() {
   // controls.update();
 
   renderer.render(scene, camera);
-   // Check if the scene is fully loaded and hide the loader
-  if (!loaderElement.hidden) {
-    loaderElement.style.display = 'none'; // Hide loader
-  }
+  
 }
-
-// window.addEventListener('load', () => {
-//   // Hide loader
-//   loaderElement.style.display = 'none';
-// });
 
 animate();
