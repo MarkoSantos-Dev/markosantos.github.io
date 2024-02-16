@@ -2,8 +2,7 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-// const loaderElement = document.querySelector('loader');
-// loaderElement.style.display = 'flex'; // Show loader
+
 
 // Setup
 
@@ -74,7 +73,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const markoTexture = new THREE.TextureLoader().load('./marko3.png');
+const markoTexture = new THREE.TextureLoader().load('./public/Images/marko3.png');
 
 const marko = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: markoTexture }));
 
@@ -82,8 +81,8 @@ scene.add(marko);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('./public/images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('./public/images/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('./public/Images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('./public/Images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
