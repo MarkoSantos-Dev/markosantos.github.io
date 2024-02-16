@@ -130,6 +130,9 @@ canvas {
   display: grid;
   transform-origin: top right;
   animation: l5-0 4s infinite linear;
+  position: absolute;
+  top: 50%;
+  right: 50%;
 }
 .loader::before,
 .loader::after {
