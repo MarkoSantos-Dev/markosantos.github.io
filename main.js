@@ -1,6 +1,5 @@
-import './style.css';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+
 
 
 
@@ -29,7 +28,7 @@ renderer.render(scene, camera);
 // scene.add(torus);
 
 const geometry = new THREE.TorusGeometry(10,3,16,100)//
-// const geometry = new THREE.TorusKnotGeometry( 10, 1.9, 41, 15, 9,10); 
+// const geometry = new THREE.TorusKnotGeometry( 10, 1.9, 99, 15, 9,10); 
 const material = new THREE.MeshStandardMaterial({color:0x892500});//wrapping paper for geometry
 const torus = new THREE.Mesh(geometry, material);
 
@@ -43,13 +42,9 @@ pointLight.position.set(5, 5, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-// Helpers
 
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper)
 
-// const controls = new OrbitControls(camera, renderer.domElement);
+
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
@@ -68,12 +63,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('./public/Images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/Images/space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const markoTexture = new THREE.TextureLoader().load('./public/Images/marko3.png');
+const markoTexture = new THREE.TextureLoader().load('/Images/marko3.png');
 
 const marko = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: markoTexture }));
 
@@ -81,8 +76,8 @@ scene.add(marko);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('./public/Images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('./public/Images/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('/Images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('/Images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
