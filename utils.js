@@ -28,3 +28,24 @@ const refreshHome = (event) => {
 };
 
 home.addEventListener('click', refreshHome);
+
+
+function toggleText() {
+    let buttonText = document.getElementById('see-more-btn');
+    let paragraphs = document.querySelectorAll('.p-disp'); // Select all paragraphs with the class 'p-disp'
+    
+    // Loop through each paragraph
+    paragraphs.forEach(paragraph => {
+        // Check if the paragraph is currently hidden
+        if (paragraph.classList.contains('d-none')) {
+            // If hidden, remove the 'd-none' class to show the paragraph
+            paragraph.classList.remove('d-none');
+        } else {
+            // If visible, add the 'd-none' class to hide the paragraph
+            paragraph.classList.add('d-none');
+        }
+    });
+
+    // Change button text based on visibility of paragraphs
+    buttonText.innerText = paragraphs[0].classList.contains('d-none') ? 'See More' : 'See Less';
+}

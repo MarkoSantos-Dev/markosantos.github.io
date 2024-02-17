@@ -132,6 +132,7 @@ svg{
     padding: 0;
     grid-column: 2 / span 9;
     margin-bottom: var(--spacing);
+    margin-left: 3.5rem;
     text-align: center;
   }
 
@@ -194,5 +195,34 @@ svg{
   }
   #links span{
     display: none;
+  }
+  .d-sm-none{
+    font-size: 4rem;
+  }
+  header {
+    grid-column: 3 / span 8;
+  }
+  #links{
+    display: flex;
+    flex-direction: column;
+  }
+  #links a{
+    margin: 0 ;
+  }
+  blockquote{
+    margin-left: 20px;
+  }
+  blockquote p{
+    font-size: 3rem;
+  }
+  section {
+    grid-column: 2 / 12;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  section p {
+    grid-column: 2 / 12;
+    text-align: center;
+    margin-bottom: 100px;
   }
 }
