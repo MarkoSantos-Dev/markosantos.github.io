@@ -216,13 +216,21 @@ svg{
     font-size: 3rem;
   }
   section {
-    grid-column: 2 / 12;
+    grid-column: 3 / 12;
     text-align: center;
     margin-bottom: 100px;
   }
   section p {
-    grid-column: 2 / 12;
+    grid-column: 3 / 12;
     text-align: center;
     margin-bottom: 100px;
+  }
+  .left {
+    grid-column: 3 / 12;
+  }
+  svg{
+    left: 4%;
+    height: 100px;
+    width: 40px;
   }
 }
