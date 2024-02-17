@@ -233,4 +233,7 @@ svg{
     height: 100px;
     width: 40px;
   }
+  canvas{
+    height: 100vh;
+  }
 }
