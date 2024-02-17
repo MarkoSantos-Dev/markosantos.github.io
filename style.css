@@ -30,15 +30,20 @@ header h1{
   margin-bottom: 60px;
 }
 
+.btn{
+  text-shadow: 1px 1px 1px #000000;
+}
+
 #btn-bottom{
+  margin-top: 30px;
   margin-bottom: 20px;
+  
 }
 
 .btn:hover{
   box-shadow: 0 0 5px cyan, 0 0 25px cyan,
   0 0 25px cyan, 0 0 50px cyan,
   0 0 100px cyan, 0 0 200px cyan;
-
 }
 
 #links a:hover{
@@ -92,10 +97,19 @@ canvas {
   top: 0;
   left: 0;
 }
-
+svg{
+  position: fixed;
+  top: 80%;
+  left: 2%;
+  height: 100px;
+  width: 70px;
+  opacity: 0%;
+  color: white;
+}
 
 
   header {
+    margin-top: 50px;
     background: var(--dark-bg);
     grid-column: 2 / span 5;
     font-size: 2.5rem;
@@ -172,4 +186,13 @@ canvas {
 @keyframes l5-1 {
   50% {transform: rotate(var(--s,30deg))}
   100% {transform: rotate(0)}
+}
+
+@media screen and (max-width: 700px) {
+  header h1{
+    font-size: 6vw;
+  }
+  #links span{
+    display: none;
+  }
 }
