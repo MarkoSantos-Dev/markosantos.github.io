@@ -188,6 +188,11 @@ svg{
   50% {transform: rotate(var(--s,30deg))}
   100% {transform: rotate(0)}
 }
+/* .card-img-top{
+  height: 10re;
+} */
+
+
 
 @media screen and (max-width: 700px) {
   header h1{
