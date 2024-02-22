@@ -31,7 +31,7 @@ header h1{
 }
 
 .btn{
-  text-shadow: 1px 1px 1px #000000;
+  text-shadow: 1px 1px 1px #282828;
 }
 
 #btn-bottom{
@@ -191,7 +191,9 @@ svg{
 /* .card-img-top{
   height: 10re;
 } */
-
+.tech-logo{
+  width: 15%;
+}
 
 
 @media screen and (max-width: 700px) {
@@ -240,5 +242,14 @@ svg{
   }
   .card-disp{
     width: 100% !important
+  }
+  .tech-logo{
+    width: 15%;
+  }
+  section p{
+    margin-bottom: 0;
+  }
+  .btn-sm{
+    font-size: 1.2rem !important;
   }
 }
