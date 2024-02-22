@@ -238,7 +238,7 @@ svg{
     height: 100px;
     width: 40px;
   }
-  canvas{
-    height: 100vh;
+  .card-disp{
+    width: 100% !important
   }
 }
