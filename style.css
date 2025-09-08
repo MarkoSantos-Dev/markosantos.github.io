@@ -216,7 +216,7 @@ svg{
     font-size: 4rem;
   }
   header {
-    grid-column: 3 / span 8;
+    grid-column: 2 / 12;
   }
   #links{
     display: flex;
@@ -246,9 +246,13 @@ svg{
   }
    .projects-section {
   /* place the projects container in the middle of the 12-column grid */
-    grid-column: 3/ 12;       
+    grid-column: 3 / 12;       
     text-align: center;
     margin-bottom: 100px;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: -10px;
+    /* margin-right: 300px; */
   }
   svg{
     left: 4%;
