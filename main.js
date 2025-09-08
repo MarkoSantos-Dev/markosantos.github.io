@@ -13,11 +13,13 @@ window.addEventListener("DOMContentLoaded", () => {
     0.1,
     1000
   );
-});
+
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
+console.log("Canvas element:", document.querySelector("#bg"));
+
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -142,6 +144,6 @@ function animate() {
   renderer.render(scene, camera);
   
 }
-
+});
 animate();
 
