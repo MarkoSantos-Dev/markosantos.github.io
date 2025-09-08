@@ -61,12 +61,12 @@ canvas {
 }
  .projects-section {
   /* place the projects container in the middle of the 12-column grid */
-  grid-column: 4 / 10;        /* center columns 4..9 (adjust to taste) */
+  grid-column: 3 / 10;        /* center columns 4..9 (adjust to taste) */
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
   margin: 40px 0;
-  margin-left: 45px;    
+  margin-left: 35px;    
 }
 
 :root {
