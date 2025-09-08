@@ -93,12 +93,24 @@ marko.position.x = 2;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
+
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  marko.rotation.y += 0.01;
-  marko.rotation.z += 0.01;
+  if (t === 0) {
+    // Smoothly animate Marko cube back to original state
+    marko.rotation.x += (0 - marko.rotation.x) * 0.1; // smooth return
+    marko.rotation.y += (0 - marko.rotation.y) * 0.1;
+    marko.rotation.z += (0 - marko.rotation.z) * 0.1;
+
+    marko.position.x += (2 - marko.position.x) * 0.1;
+    marko.position.z += (-5 - marko.position.z) * 0.1;
+  } else {
+    // Rotate only when scrolling
+    marko.rotation.y += 0.01;
+    marko.rotation.z += 0.01;
+  }
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
