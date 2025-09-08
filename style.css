@@ -59,7 +59,15 @@ canvas {
   left: 0;
   z-index: -1; /* send it to background */
 }
-
+ .projects-section {
+  /* place the projects container in the middle of the 12-column grid */
+  grid-column: 3 / 10;        /* center columns 4..9 (adjust to taste) */
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 40px 0;
+  margin-left: 45px;    
+}
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
