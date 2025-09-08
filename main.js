@@ -109,11 +109,11 @@ document.body.onscroll = moveCamera;
 moveCamera();
 
 // --- Added code: Handle window resize for better performance ---
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+// window.addEventListener('resize', () => {
+//   camera.aspect = window.innerWidth / window.innerHeight;
+//   camera.updateProjectionMatrix();
+//   renderer.setSize(window.innerWidth, window.innerHeight);
+// });
 // --- End of added code ---
 
 // Animation Loop
