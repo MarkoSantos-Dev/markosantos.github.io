@@ -30,18 +30,18 @@ const refreshHome = (event) => {
 home.addEventListener('click', refreshHome);
 
 
-// Add an event listener to the button element with id 'see-more-btn'
-document.getElementById('see-more-btn').addEventListener('click', function() {
-    let buttonText = this; // 'this' refers to the button element
-    let paragraphs = document.querySelectorAll('.p-disp'); // Select all paragraphs with the class 'p-disp'
+// // Add an event listener to the button element with id 'see-more-btn'
+// document.getElementById('see-more-btn').addEventListener('click', function() {
+//     let buttonText = this; // 'this' refers to the button element
+//     let paragraphs = document.querySelectorAll('.p-disp'); // Select all paragraphs with the class 'p-disp'
     
-    // Loop through each paragraph
-    paragraphs.forEach(paragraph => {
-        // Toggle the 'd-none' class to show/hide the paragraph
-        paragraph.classList.toggle('d-none');
-    });
+//     // Loop through each paragraph
+//     paragraphs.forEach(paragraph => {
+//         // Toggle the 'd-none' class to show/hide the paragraph
+//         paragraph.classList.toggle('d-none');
+//     });
 
-    // Change button text based on visibility of paragraphs
-    buttonText.innerText = paragraphs[0].classList.contains('d-none') ? 'See More' : 'See Less';
-});
+//     // Change button text based on visibility of paragraphs
+//     buttonText.innerText = paragraphs[0].classList.contains('d-none') ? 'See More' : 'See Less';
+// });
 
