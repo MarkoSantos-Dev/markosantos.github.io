@@ -149,15 +149,7 @@ svg{
   .left {
     grid-column: 6 / 12;
   }
-  .projects-section {
-  /* place the projects container in the middle of the 12-column grid */
-  grid-column: 3 / 10;        /* center columns 4..9 (adjust to taste) */
-  max-width: 1200px;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 40px 0;
-  margin-left: 45px;    
-}
+
   /* HTML: <div class="loader"></div> */
 /* HTML: <div class="loader"></div> */
 .loader {
