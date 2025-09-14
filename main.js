@@ -86,9 +86,8 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-// marko.position.z = -5;
-// marko.position.x = 2;
-marko.rotation.set(0, 0, 0);
+marko.position.z = -5;
+marko.position.x = 2;
 
 // Scroll Animation
 
