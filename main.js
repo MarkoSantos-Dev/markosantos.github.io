@@ -64,7 +64,7 @@ scene.background = spaceTexture;
 
 const markoTexture = new THREE.TextureLoader().load('/Images/Marko3.png');
 
-const marko = new THREE.Mesh(new THREE.BoxGeometry(3, 3), new THREE.MeshBasicMaterial({ map: markoTexture,  transparent: true  }));
+const marko = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: markoTexture }));
 
 scene.add(marko);
 
@@ -86,8 +86,9 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-marko.position.z = -5;
-marko.position.x = 2;
+// marko.position.z = -5;
+// marko.position.x = 2;
+marko.rotation.set(0, 0, 0);
 
 // Scroll Animation
 
