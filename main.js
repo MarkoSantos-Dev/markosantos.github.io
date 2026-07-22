@@ -93,19 +93,21 @@ marko.position.x = 2;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
+  const scrollY = window.scrollY;
 
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  if (t === 0) {
-    // Smoothly animate Marko cube back to original state
-    marko.rotation.x += (0 - marko.rotation.x) * 0.1; // smooth return
-    marko.rotation.y += (0 - marko.rotation.y) * 0.1;
-    marko.rotation.z += (0 - marko.rotation.z) * 0.1;
+  if (scrollY < 10) {
+    // Smoothly animate Marko cube back to original state with aggressive easing
+    const resetStrength = 0.4; // Strong easing for quick reset
+    marko.rotation.x += (0 - marko.rotation.x) * resetStrength;
+    marko.rotation.y += (0 - marko.rotation.y) * resetStrength;
+    marko.rotation.z += (0 - marko.rotation.z) * resetStrength;
 
-    marko.position.x += (2 - marko.position.x) * 0.1;
-    marko.position.z += (-5 - marko.position.z) * 0.1;
+    marko.position.x += (2 - marko.position.x) * resetStrength;
+    marko.position.z += (-5 - marko.position.z) * resetStrength;
   } else {
     // Rotate only when scrolling
     marko.rotation.y += 0.01;
